@@ -28,14 +28,12 @@ class LoginActivity : AppCompatActivity() {
             if(email.isEmpty() || password.isEmpty()){
                 Toast.makeText(this,"Please fill up all the fields!!!", Toast.LENGTH_SHORT).show()
             }else{
-                viewModel.signIn(email,password).observe(this, {
+                viewModel.signIn(email,password).observe(this,{
                     Toast.makeText(this,it, Toast.LENGTH_SHORT).show()
                     if(it.equals("Sign in successful")){
                         startActivity(Intent(this, HomeActivity::class.java))
                     }
                 })
-
-
             }
         }
         binding.registerTxt.setOnClickListener {
@@ -47,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(FirebaseAuth.getInstance().currentUser?.uid!=null){
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
         }
     }
 }
