@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:text="Registration"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/emailEt"
+        app:layout_constraintStart_toStartOf="@+id/emailEt"
+        app:layout_constraintTop_toBottomOf="@+id/emailEt" />
+
+    <EditText
+        android:id="@+id/conPassEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Confirm your password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEt"
+        app:layout_constraintStart_toStartOf="@+id/passwordEt"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEt" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        android:text="Register"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/conPassEt"
+        app:layout_constraintStart_toStartOf="@+id/conPassEt"
+        app:layout_constraintTop_toBottomOf="@+id/conPassEt"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/loginTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Login!!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
